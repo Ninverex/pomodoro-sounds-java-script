@@ -1,4 +1,4 @@
-// Configuration
+
 const TIMER_CONFIG = {
     pomodoro: 25,
     shortBreak: 5,
@@ -7,13 +7,13 @@ const TIMER_CONFIG = {
 
 const SOUNDS = {
     rain: 'sounds/rain-01.mp3',
-    forest: 'sounds/fire-03.mp3',
-    fire: 'https://assets.mixkit.co/sfx/preview/mixkit-campfire-crackles-1330.mp3',
+    forest: 'sounds/forest-02.mp3',
+    fire: 'sounds/fire-03.mp3',
     wind: 'https://assets.mixkit.co/sfx/preview/mixkit-blizzard-wind-loop-1153.mp3',
-    alarm: 'https://assets.mixkit.co/sfx/preview/mixkit-alarm-digital-clock-beep-989.mp3'
+    alarm: 'sounds/alarm.mp3'
 };
 
-// State
+
 let timeLeft = TIMER_CONFIG.pomodoro * 60;
 let isRunning = false;
 let timerInterval = null;
@@ -21,7 +21,7 @@ let currentMode = 'pomodoro';
 let currentAudio = null;
 let alarmSound = new Audio(SOUNDS.alarm);
 
-// DOM Elements
+
 const minutesDisplay = document.getElementById('minutes');
 const secondsDisplay = document.getElementById('seconds');
 const startBtn = document.getElementById('startBtn');
@@ -31,7 +31,7 @@ const shortBreakBtn = document.getElementById('shortBreakBtn');
 const longBreakBtn = document.getElementById('longBreakBtn');
 const soundButtons = document.querySelectorAll('.sound-btn');
 
-// Timer Functions
+
 function updateDisplay() {
     const minutes = Math.floor(timeLeft / 60);
     const seconds = timeLeft % 60;
@@ -80,12 +80,12 @@ function setMode(mode) {
     timeLeft = TIMER_CONFIG[mode] * 60;
     updateDisplay();
 
-    // Update active button
+
     document.querySelectorAll('.mode-btn').forEach(btn => btn.classList.remove('active'));
     document.querySelector(`#${mode}Btn`).classList.add('active');
 }
 
-// Sound Functions
+
 function playSound(soundName) {
     if (currentAudio) {
         currentAudio.pause();
@@ -106,7 +106,7 @@ function stopSound() {
     }
 }
 
-// Event Listeners
+
 startBtn.addEventListener('click', startTimer);
 resetBtn.addEventListener('click', resetTimer);
 
@@ -129,5 +129,5 @@ soundButtons.forEach(button => {
     });
 });
 
-// Initialize display
+
 updateDisplay();
