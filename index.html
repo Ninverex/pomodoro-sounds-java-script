@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Timer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <div class="timer-container">
+        <div class="mode-buttons">
+            <button id="pomodoroBtn" class="mode-btn active">Pomodoro</button>
+            <button id="shortBreakBtn" class="mode-btn">Short Break</button>
+            <button id="longBreakBtn" class="mode-btn">Long Break</button>
+        </div>
+
+        <div class="timer-display">
+            <span id="minutes">25</span>:<span id="seconds">00</span>
+        </div>
+
+        <div class="timer-controls">
+            <button id="startBtn" class="control-btn">Start</button>
+            <button id="resetBtn" class="control-btn">Reset</button>
+        </div>
+
+        <div class="sound-controls">
+            <h3>Ambient Sounds</h3>
+            <div class="sound-buttons">
+                <button id="rainSound" class="sound-btn">Rain</button>
+                <button id="forestSound" class="sound-btn">Forest</button>
+                <button id="fireSound" class="sound-btn">Fire</button>
+                <button id="windSound" class="sound-btn">Wind</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
