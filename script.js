@@ -7,10 +7,10 @@ const TIMER_CONFIG = {
 
 const SOUNDS = {
     rain: 'sounds/rain-01.mp3',
-    forest: 'sounds/forest-02.wav',
+    forest: 'sounds/forest-02.mp3',
     fire: 'sounds/fire-03.mp3',
-    wind: 'https://assets.mixkit.co/sfx/preview/mixkit-blizzard-wind-loop-1153.mp3',
-    alarm: 'sounds/alarm.wav'
+    wind: 'sounds/wind-04.mp3',
+    alarm: 'sounds/alarm.mp3'
 };
 
 
