@@ -44,9 +44,27 @@ function updateDisplay() {
 }
 
 
+let pomodoroCount = 0;
+let shortBreakCount = 0;
+let longBreakCount = 0;
+
+function updateStats() {
+    if (currentMode === 'pomodoro') {
+        pomodoroCount++;
+        document.getElementById('pomodoroCount').textContent = `Pomodoro Sessions: ${pomodoroCount}`;
+    } else if (currentMode === 'shortBreak') {
+        shortBreakCount++;
+        document.getElementById('shortBreakCount').textContent = `Short Breaks: ${shortBreakCount}`;
+    } else if (currentMode === 'longBreak') {
+        longBreakCount++;
+        document.getElementById('longBreakCount').textContent = `Long Breaks: ${longBreakCount}`;
+    }
+}
+
 function playAlarm() {
     alarmSound.currentTime = 0;
     alarmSound.play();
+    updateStats();
 }
 
 function startTimer() {

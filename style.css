@@ -132,3 +132,13 @@ body {
     background-color: #3b82f6;
     transition: width 0.1s;
 }
+.stats {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.stats p {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+    color: #4b5563;
+}
