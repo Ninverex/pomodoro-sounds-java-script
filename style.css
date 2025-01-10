@@ -118,3 +118,17 @@ body {
     background-color: #8b5cf6;
     color: white;
 }
+.progress-bar {
+    height: 10px;
+    background-color: #e5e7eb;
+    border-radius: 5px;
+    margin-top: 1rem;
+    overflow: hidden;
+}
+
+#progress {
+    height: 100%;
+    width: 0;
+    background-color: #3b82f6;
+    transition: width 0.1s;
+}

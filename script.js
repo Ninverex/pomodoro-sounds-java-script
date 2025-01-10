@@ -37,7 +37,12 @@ function updateDisplay() {
     const seconds = timeLeft % 60;
     minutesDisplay.textContent = String(minutes).padStart(2, '0');
     secondsDisplay.textContent = String(seconds).padStart(2, '0');
+
+    const totalSeconds = TIMER_CONFIG[currentMode] * 60;
+    const progressPercent = ((totalSeconds - timeLeft) / totalSeconds) * 100;
+    document.getElementById('progress').style.width = `${progressPercent}%`;
 }
+
 
 function playAlarm() {
     alarmSound.currentTime = 0;
